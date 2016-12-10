@@ -35,109 +35,118 @@ p, span {
   color: white; }
 
 a {
-  color: black;
+  color: white;
   padding: 0;
   font-family: "magnitude";
   font-weight: 0; }
   a:hover {
-    color: black; }
+    color: #c0392b; }
 
 .navbar {
   margin-bottom: 0px;
-  background-color: rgba(0, 0, 0, 0.8); }
-  .navbar .container-fluid {
-    border-bottom: 1px solid #c0392b; }
-    .navbar .container-fluid a {
-      color: white;
-      font-size: 1.6em;
-      transition: 0.2s ease-in-out; }
-      .navbar .container-fluid a:hover, .navbar .container-fluid a:focus, .navbar .container-fluid a:active {
-        background-color: transparent;
-        color: #c0392b; }
-    .navbar .container-fluid .navbar-header .navbar-brand {
-      line-height: 0;
-      font-family: azedo;
-      font-size: 3.9em;
-      color: #c0392b;
-      padding-left: 0.1em;
-      border-bottom: 0px solid transparent; }
-      .navbar .container-fluid .navbar-header .navbar-brand:hover {
-        background-color: transparent;
-        color: white; }
-    .navbar .container-fluid .navbar-collapse .navbar-right {
-      border-top-left-radius: 9px;
-      border-bottom-left-radius: 9px; }
-      .navbar .container-fluid .navbar-collapse .navbar-right li {
-        background: #c0392b; }
-        .navbar .container-fluid .navbar-collapse .navbar-right li a {
-          color: white;
-          line-height: 1.3;
-          font-size: 1.48em; }
-          .navbar .container-fluid .navbar-collapse .navbar-right li a:hover, .navbar .container-fluid .navbar-collapse .navbar-right li a:focus, .navbar .container-fluid .navbar-collapse .navbar-right li a:active {
-            background-color: orangered; }
+  background-color: black; }
+  .navbar .container-fluid a {
+    color: white;
+    font-size: 1.6em;
+    transition: 0.2s ease-in-out; }
+    .navbar .container-fluid a:hover, .navbar .container-fluid a:focus, .navbar .container-fluid a:active {
+      background-color: transparent;
+      color: #c0392b; }
+  .navbar .container-fluid .navbar-header .navbar-brand {
+    line-height: 0;
+    font-family: azedo;
+    font-size: 3.9em;
+    color: #c0392b;
+    padding-left: 0.1em;
+    border-bottom: 0px solid transparent; }
+    .navbar .container-fluid .navbar-header .navbar-brand:hover, .navbar .container-fluid .navbar-header .navbar-brand:active, .navbar .container-fluid .navbar-header .navbar-brand:focus {
+      background-color: transparent;
+      color: white; }
+  .navbar .container-fluid .navbar-collapse .navbar-right {
+    border-top-left-radius: 9px;
+    border-bottom-left-radius: 9px; }
+    .navbar .container-fluid .navbar-collapse .navbar-right li {
+      background: black; }
+      .navbar .container-fluid .navbar-collapse .navbar-right li:nth-child(1) a {
+        border-left: 1px solid #c0392b; }
+      .navbar .container-fluid .navbar-collapse .navbar-right li a {
+        color: #c0392b;
+        line-height: 1.3;
+        font-size: 1.48em;
+        border-right: 1px solid #c0392b; }
+        .navbar .container-fluid .navbar-collapse .navbar-right li a:hover, .navbar .container-fluid .navbar-collapse .navbar-right li a:focus, .navbar .container-fluid .navbar-collapse .navbar-right li a:active {
+          color: white; }
 
 .navbar-fixed-top {
-  border-bottom: 0px solid #c0392b; }
+  border-bottom: 1px solid #c0392b; }
 
-.hero {
-  height: 0vh;
-  width: 100vw;
-  background: url("../img/Looper-Movie-Poster.jpg");
-  background-position: top;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative; }
-  .hero:after {
-    content: "";
-    background-image: radial-gradient(transparent, black);
-    height: 100%;
-    width: 100%;
-    position: absolute; }
-
-.wrapper {
-  height: 69em;
-  width: 100%;
-  position: relative; }
-  .wrapper .sidebar {
-    min-width: 20em;
-    width: 19%;
-    height: 100vh;
-    float: left;
-    position: fixed;
-    overflow-y: scroll;
-    padding-bottom: 7em; }
-    .wrapper .sidebar::-webkit-scrollbar {
-      width: 0.8em; }
-    .wrapper .sidebar::-webkit-scrollbar-thumb {
-      background: #c0392b;
-      border-radius: 5px; }
-    .wrapper .sidebar .sidebar-list h2 {
-      padding: 0.2em 0.4em;
-      background-color: transparent;
-      border-radius: 15px;
-      font-size: 1.8em;
-      width: 10em;
-      color: #c0392b;
-      font-weight: 700; }
-      .wrapper .sidebar .sidebar-list h2:nth-child(8) {
-        background-color: transparent; }
-    .wrapper .sidebar .sidebar-list hr {
-      border-color: #c0392b;
-      width: 80%; }
-    .wrapper .sidebar .sidebar-list li a {
-      color: white;
-      font-size: 1.4em;
-      transition: 0.1s ease-in-out;
-      transition: 0.2s ease-in-out; }
-      .wrapper .sidebar .sidebar-list li a:hover, .wrapper .sidebar .sidebar-list li a:active, .wrapper .sidebar .sidebar-list li a:focus {
+.sidebar-wrapper {
+  padding-top: 3.9em; }
+  .sidebar-wrapper .sidebar {
+    margin-left: -13px; }
+    .sidebar-wrapper .sidebar .sidebar-list {
+      border-right: 1px solid #c0392b;
+      border-bottom: 1px solid #c0392b;
+      margin-left: -1em; }
+      .sidebar-wrapper .sidebar .sidebar-list h2 {
+        padding: 0em 0em;
         background-color: transparent;
-        color: #c0392b; }
-  .wrapper .main {
-    min-width: 32em;
-    width: 81.4%;
-    height: 100%;
-    float: right;
-    background-color: #0e0e0e;
-    position: relative; }
+        border-radius: 15px;
+        font-size: 1.8em;
+        width: 10em;
+        color: #c0392b;
+        font-weight: 700;
+        text-transform: uppercase; }
+        .sidebar-wrapper .sidebar .sidebar-list h2:nth-child(8) {
+          background-color: transparent; }
+      .sidebar-wrapper .sidebar .sidebar-list hr {
+        border-color: #c0392b;
+        width: 100%; }
+      .sidebar-wrapper .sidebar .sidebar-list li {
+        overflow: hidden; }
+        .sidebar-wrapper .sidebar .sidebar-list li a {
+          color: white;
+          font-size: 1.4em;
+          transition: 0.1s ease-in-out;
+          transition: 0.2s ease-in-out;
+          text-transform: uppercase;
+          transition: 0.1s ease-in-out; }
+          .sidebar-wrapper .sidebar .sidebar-list li a:hover, .sidebar-wrapper .sidebar .sidebar-list li a:active, .sidebar-wrapper .sidebar .sidebar-list li a:focus {
+            background-color: transparent;
+            color: #c0392b;
+            text-indent: 1em; }
+  .sidebar-wrapper .main {
+    height: 100vh;
+    background-color: rgba(14, 14, 14, 0); }
+    .sidebar-wrapper .main .extra {
+      margin: 0 auto; }
+      .sidebar-wrapper .main .extra .row {
+        margin: 0 auto; }
+        .sidebar-wrapper .main .extra .row div a {
+          position: relative; }
+          .sidebar-wrapper .main .extra .row div a:hover > div {
+            opacity: 1; }
+          .sidebar-wrapper .main .extra .row div a div {
+            background-color: rgba(0, 0, 0, 0.9);
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            font-family: "magnitude";
+            font-weight: 100;
+            font-size: 1.2em;
+            color: white;
+            opacity: 0;
+            transition: 0.2s ease-in-out; }
+      .sidebar-wrapper .main .extra h2 {
+        margin: 0;
+        padding: 0;
+        padding: 0.6em 0em 1em 0em;
+        background-color: transparent;
+        font-size: 2.2em;
+        color: #c0392b;
+        font-weight: 700; }
+      .sidebar-wrapper .main .extra > div + h2 {
+        padding-top: 1em; }
 
 /*# sourceMappingURL=mainstyle.css.map */
