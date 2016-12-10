@@ -1,0 +1,17 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "scss/mainstyle.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../public/styles/",
+                "includePaths": [],
+                "sourceComments": false,
+                "outputStyle": "nested"
+            },
+            "linting.collapsed": true,
+            "mikaeljorhult.bracketsPHPLintTools.php-available": false,
+            "debug.showErrorsInStatusBar": true
+        }
+    }
+}
