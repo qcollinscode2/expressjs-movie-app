@@ -59,6 +59,68 @@ a {
 .navbar-fixed-top {
 }
 
+.search-overlay {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.92);
+  overflow: hidden;
+  display: none;
+  padding: 4em 4em 4em 4em;
+  .search-box-container {
+    padding: 6em 0em 0em 20%;
+    .search-box {
+      width: 100%;
+      .search-input-group {
+        border: none;
+        border-radius: 0;
+        background-color: transparent;
+        margin: 0 auto;
+        input[type=text] {
+          font-size: 7em;
+          background-color: transparent;
+          height: 2em;
+          border: none;
+          border-bottom: 1px solid rgba(192, 57, 43, 0.92);
+          outline: none;
+          color: rgba(192, 57, 43, 0.92);
+        }
+        ::-webkit-input-placeholder {
+            color: rgba(192, 57, 43, 0.32);
+          }
+        .input-button {
+          overflow: hidden;
+          &:hover > button {
+            color: white;
+          }
+          button {
+            border-radius: 0;
+            height: 4em;
+            color: rgba(192, 57, 43, 0.92);
+            font-size: 49px;
+            padding: 0em 1em;
+            border: 0;
+            background-color: transparent;
+            appearance: none;
+            outline: none;
+            transition: 0.2s ease-in-out;
+            font-weight: bolder;
+            overflow: hidden;
+          }
+        }
+      }
+    }
+  }
+}
+
+.show_search-overlay {
+  display: block;
+  opacity: 1;
+}
 // Navigation
 .navbar {
   margin-bottom: 0px;
