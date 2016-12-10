@@ -50,12 +50,13 @@ a {
   right: 0;
   position: fixed;
   z-index: 1;
-  background-color: rgba(0, 0, 0, 0.92);
+  background-color: rgba(0, 0, 0, 0.96);
   overflow: hidden;
   display: none;
   padding: 4em 4em 4em 4em; }
   .search-overlay .search-box-container {
-    padding: 6em 0em 0em 20%; }
+    padding: 9em 0em 0em 20%;
+    overflow: hidden; }
     .search-overlay .search-box-container .search-box {
       width: 100%; }
       .search-overlay .search-box-container .search-box .search-input-group {
@@ -76,7 +77,8 @@ a {
         .search-overlay .search-box-container .search-box .search-input-group .input-button {
           overflow: hidden; }
           .search-overlay .search-box-container .search-box .search-input-group .input-button:hover > button {
-            color: white; }
+            color: white;
+            text-indent: 0.5em; }
           .search-overlay .search-box-container .search-box .search-input-group .input-button button {
             border-radius: 0;
             height: 4em;
@@ -110,7 +112,7 @@ a {
     font-family: azedo;
     font-size: 3.9em;
     color: #c0392b;
-    padding-left: 0.1em;
+    padding-left: 0em;
     border-bottom: 0px solid transparent; }
     .navbar .container-fluid .navbar-header .navbar-brand:hover, .navbar .container-fluid .navbar-header .navbar-brand:active, .navbar .container-fluid .navbar-header .navbar-brand:focus {
       background-color: transparent;
@@ -136,7 +138,7 @@ a {
 .sidebar-wrapper {
   padding-top: 3.9em; }
   .sidebar-wrapper .sidebar {
-    margin-left: -13px; }
+    min-width: 20em; }
     .sidebar-wrapper .sidebar .sidebar-list {
       border-right: 1px solid #c0392b;
       border-bottom: 1px solid #c0392b;
@@ -147,6 +149,7 @@ a {
         border-radius: 15px;
         font-size: 1.8em;
         width: 10em;
+        text-indent: 0.6em;
         color: #c0392b;
         font-weight: 700;
         text-transform: uppercase; }
@@ -156,7 +159,8 @@ a {
         border-color: #c0392b;
         width: 100%; }
       .sidebar-wrapper .sidebar .sidebar-list li {
-        overflow: hidden; }
+        overflow: hidden;
+        text-indent: 1.2em; }
         .sidebar-wrapper .sidebar .sidebar-list li a {
           color: white;
           font-size: 1.4em;
@@ -167,7 +171,7 @@ a {
           .sidebar-wrapper .sidebar .sidebar-list li a:hover, .sidebar-wrapper .sidebar .sidebar-list li a:active, .sidebar-wrapper .sidebar .sidebar-list li a:focus {
             background-color: transparent;
             color: #c0392b;
-            text-indent: 1em; }
+            text-indent: 1.4em; }
   .sidebar-wrapper .main {
     height: 100vh;
     background-color: rgba(14, 14, 14, 0); }
@@ -180,7 +184,7 @@ a {
           .sidebar-wrapper .main .extra .row div a:hover > div {
             opacity: 1; }
           .sidebar-wrapper .main .extra .row div a div {
-            background-color: rgba(0, 0, 0, 0.9);
+            background-color: rgba(0, 0, 0, 0.8);
             height: 100%;
             width: 100%;
             position: absolute;
@@ -201,5 +205,22 @@ a {
         font-weight: 700; }
       .sidebar-wrapper .main .extra > div + h2 {
         padding-top: 1em; }
+
+@media screen and (min-width: 0em) {
+  .sidebar-wrapper {
+    padding-top: 3.9em; }
+    .sidebar-wrapper .sidebar {
+      min-width: 20em; }
+      .sidebar-wrapper .sidebar .sidebar-list {
+        border-right: 0px solid black; } }
+
+@media screen and (min-width: 787px) {
+  .sidebar-wrapper {
+    margin: 0; }
+    .sidebar-wrapper .sidebar {
+      margin-left: 0px; }
+      .sidebar-wrapper .sidebar .sidebar-list {
+        margin-left: 0px;
+        border-right: 1px solid #c0392b; } }
 
 /*# sourceMappingURL=mainstyle.css.map */
