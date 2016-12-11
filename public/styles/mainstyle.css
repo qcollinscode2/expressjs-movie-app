@@ -23,7 +23,7 @@
   src: url("../fonts/Moderne-Sans.ttf") format("truetype"); }
 
 * {
-  font-family: 'magnitude'; }
+  font-family: 'azedo'; }
 
 a {
   color: white;
@@ -103,18 +103,19 @@ body {
       border-bottom: 0px solid transparent;
       box-shadow: 0px 0px 25px 1px black; }
       .main-wrapper .main-nav nav .navbar-header button span {
-        background-color: #c0392b; }
+        background-color: white; }
       .main-wrapper .main-nav nav .navbar-header .navbar-brand {
         font-family: "azedo";
         font-size: 4em;
         padding: 0;
         color: white;
         padding-left: 0.2em;
-        letter-spacing: 0em; }
+        letter-spacing: 0em;
+        padding-right: 3.1em; }
         .main-wrapper .main-nav nav .navbar-header .navbar-brand:hover {
           color: white; }
       .main-wrapper .main-nav nav #navbar-menu ul li a {
-        font-size: 1.4em; }
+        font-size: 1.5em; }
       .main-wrapper .main-nav nav #navbar-menu > .navbar-nav:nth-child(1) a:hover, .main-wrapper .main-nav nav #navbar-menu > .navbar-nav:nth-child(1) a:active, .main-wrapper .main-nav nav #navbar-menu > .navbar-nav:nth-child(1) a:focus {
         background-color: transparent; }
       .main-wrapper .main-nav nav .navbar-right {
@@ -137,9 +138,9 @@ body {
     min-height: 100vh; }
     .main-wrapper .main-content .aside-container .aside-row .sidebar .block h1 {
       color: white;
-      font-weight: 700;
+      font-weight: 0;
       padding-left: 0.4em;
-      font-size: 1.6em;
+      font-size: 2.3em;
       text-transform: uppercase;
       margin-top: 3px; }
     .main-wrapper .main-content .aside-container .aside-row .sidebar .block ul {
@@ -151,6 +152,7 @@ body {
         .main-wrapper .main-content .aside-container .aside-row .sidebar .block ul li a {
           text-transform: uppercase;
           display: block;
+          font-family: 'arial';
           font-size: 1.2em;
           padding: 0.3em 0.2em 0.3em 1.6em;
           transition: 0.1s ease-in-out;
