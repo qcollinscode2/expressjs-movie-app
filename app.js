@@ -10,12 +10,37 @@ app.set('view engine', 'ejs');
 
 // Home Page
 app.get('/', function(req, res) {
-   res.send("This is a server response on the home page");
+   res.render('home');
 });
 
 // Movie Page
 app.get('/movies', function(req, res) {
-  res.send("This is the movies page that lists categories");
+  res.render('movie_home');
+});
+
+// Star Wars Movie Home Page
+app.get('/movies/starwars', function(req, res) {
+  res.render("movie_single", {
+    title : "Star Wars"
+  });
+});
+
+// Star Wars Movie Episode Page
+app.get('/movies/starwars/:episode_number?', function(req, res) {
+  var episode_number = req.params.episode_number;
+  var errorMsg = "The page you are looking for is not here";
+  var okMsg = "This is the page for Star Wars " + episode_number;
+  if (episode_number < 1 || episode_number > 7) {
+    res.send(errorMsg);
+  }else {
+    res.render("movie_single");
+  }
+});
+
+// If the user request any page other than the star wars home page or episode page respond // with "wrong page".
+app.get('/movies/starwars/*', function(req, res) {
+  var episode_number = req.params.episode_number;
+  res.send('wrong page bye');
 });
 
 // Movie List Page
@@ -23,55 +48,20 @@ app.get('/movies/list/:list_number?', function(req, res) {
   res.send("This is the movies list page that shows up after clicking a category");
 });
 
-// movie_single page
-app.get('/movies/:movie_id?/:episode_number?', function(req, res) {
-  var movie_id = req.params.movie_id;
+app.get('/movies/*', function(req, res) {
   var episode_number = req.params.episode_number;
-  res.send("This is the page for " + movie_id + episode_number );
-  console.log("The Number" + movie_id);
+  res.send('wrong page bye');
 });
 
-// Tv Show Page
-app.get('/tv', function(req, res) {
-  res.send("This is the tv page that lists tv categories");
+app.get('/movies/*/*', function(req, res) {
+  var episode_number = req.params.episode_number;
+  res.send('wrong page bye');
 });
 
-// Tv List Page
-app.get('/tv/list/:epList_number?', function(req, res) {
-  res.send("This is the tv list page that shows up after clicking a category");
+// error Page
+app.get('/*', function(req, res) {
+  res.send("This is not the page you are looking for");
 });
-
-// tv_single
-app.get('/movies/:tv_id?/:season_epList_number?', function(req, res) {
-  res.send("This is the tv list page that shows up after clicking a tv show link");
-  
-  var tv_id = req.params.tv_id;
-  var season_epList_number = req.params.season_epList_number;
-});
-
-// Game Page
-app.get('/games', function(req, res) {
-  res.send("This is the games page that lists game categories");
-});
-
-// Game List Page
-app.get('/games/list', function(req, res) {
-  res.send("This is the games list page that shows up after clicking a category");
-});
-
-// tv_single
-app.get('/games/:game_id?/:game_seq_number?', function(req, res) {
-  res.send("This is the tv list page that shows up after clicking a category");
-  
-  var game_id = req.params.game_id;
-  var game_seq_number = req.params.game_seq_number;
-});
-
-
-app.get("*", function(req, res) {
-  res.send("Sorry! Not the page you are looking for.");
-});
-
 
 //////////////////////////
 ///////// Server /////////
@@ -79,5 +69,5 @@ app.get("*", function(req, res) {
 
 // Server
 app.listen(3000, function() {
-  console.log("The server is running on localhost:3000");
+  console.log("The server is running on localhost:3000 .......");
 });

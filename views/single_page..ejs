@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang = "en">
+   <head>
+      <% include partials/head.ejs %>
+   </head>
+   <body>
+     <% include partials/header.ejs %>
+        <div class="main-content row">
+         <div class="info-container container-fluid">
+          <div class="img-hero-container row">
+           <img class="info-hero" src="../public/img/Looper-Movie-Poster.jpg" alt="...">
+           </div>
+          <div class="row">
+          <div class="info col-lg-12">
+           <div class="row">
+            <div class="img-sngl col-xs-6 col-md-2 col-lg-push-1">
+              <a href="#" class="thumbnail">
+                <img class="" src="../public/img/Looper.jpg" alt="...">
+              </a>
+            </div>
+            <div class="col-lg-6 col-lg-push-2">
+              <h1><%= title %> (<span>2013</span>)</h1>
+              <p><b>Action | Drama | Sci-Fi</b></p>
+              <p><span>108</span> mins</p>
+              <p><b>Rated: </b><span>R</span></p>
+              <p>Set in the year 2154, where the very wealthy live on a man made space station while the rest of the population resides on a ruined Earth, a man takes on a mission that could bring equality to the polarized worlds.</p>
+              <p><b>Director: </b><span>Neil Blomkamp</span></p>
+              <p><b>Writer: </b><span>Neil Blomkamp</span></p>
+              <p><b>Actors: </b><span>Matt Damon, Jodie Foster, Sharlto Copley</span></p>
+              <p><b>Main Characters: </b><span>Matt Damon, Jodie Foster, Sharlto Copley</span></p>
+              <p><b>Official Website: </b><a href="#">Looper</a></p>
+            </div>
+            </div>
+          </div>
+           </div>
+          </div>
+        </div>
+        <footer class="row">
+        <% include partials/footer.ejs %>
+       </footer>
+     </div>
+      <% include partials/scripts.ejs %>
+   </body>
+
+</html>
