@@ -4,14 +4,16 @@ var app = express();
 
 app.set('view engine', 'ejs');
 
+var path = require('path');
+app.use(express.static(path.join(__dirname, 'public')));
+var projRoutes = require('./routes');
+
 /////////////////////////////
 ////////// Routes ///////////
 /////////////////////////////
 
 // Home Page
-app.get('/', function(req, res) {
-   res.render('home');
-});
+app.get('/', projRoutes.home);
 
 // Movie Page
 app.get('/movies', function(req, res) {

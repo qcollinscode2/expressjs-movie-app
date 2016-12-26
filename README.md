@@ -14,17 +14,4 @@ A simple calculator.
 
 # This is how the app look currently.
 
-## Home Page
-<img src="public/img/projectimg2.png">
-
-## Search
-<img src="public/img/projectimg3.png">
-
-## Movies Home Page
-<img src="public/img/projectimg4.png">
-
-## Single Movie Page
-<img src="public/img/projectimg5.png">
-
-## Old Front Page Design
 <img src="public/img/projectimg.png">

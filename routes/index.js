@@ -1,7 +1,28 @@
+var request = require('request');
+var moviesJSON = require('../movies.json');
+
 // Home Page
 exports.home = function(req, res) {
-   res.render('home');
-};
+  var movies = moviesJSON.movies;
+  var url = 'http://www.omdbapi.com/?t=';
+  //var randomNumber = Math.floor((Math.random() * movies.length -1) +1);
+  //var randomMovie = randomMovieArray[randomNumber];
+  
+  var title = "Star Wars";
+  function go() {
+    this.data = data;
+  request(url + encodeURI(title), function(error, response, body) {
+      if (!error && response.statusCode == 200) {
+       data = JSON.parse(body);
+      }
+    });
+  console.log(data);
+}
+console.log(go());
+ // res.render('home', {
+ //       infoInput: dataPoster
+ //  });
+}
 
 // Movie/Game/Tv Shows Page
 exports.media_home = function(req, res) {
@@ -34,21 +55,19 @@ exports.errorStarWars = function(req, res) {
 };
 
 // Movie List Page
-app.get('/movies/list/:list_number?', function(req, res) {
+exports.movieList = function(req, res) {
   res.send("This is the movies list page that shows up after clicking a category");
-});
+};
 
 exports.errorMovie = function(req, res) {
-  var episode_number = req.params.episode_number;
   res.send('wrong page bye');
-});
+};
 
 exports.errorMovieEpisode = function(req, res) {
-  var episode_number = req.params.episode_number;
   res.send('wrong page bye');
-});
+};
 
 // error Page
 exports.errorOtherMovie = function(req, res) {
   res.send("This is not the page you are looking for");
-});
+};
