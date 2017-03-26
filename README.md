@@ -1,4 +1,5 @@
-# The Movie Database App
+# expressjs-movie-app
+
 
 <strong>Language: HTML/CSS+JavaScript</strong>
 
